@@ -51,7 +51,7 @@ for BRANCH in ${BRANCHES[@]}; do
     rm -rf $VERSION
     # create links for the index page
     COMMIT=$(git show -s --format='%ad %H' --date=format:'%Y-%m-%d %H:%M:%S')
-    LINKS+=("<dt><a href=\"Enter\">${BRANCH}</a><
+    LINKS+=("<dt><a href=\"${BRANCH}/\">Enter</a><
     /dt>")
     if [ "${BRANCH}" != "${CURRENT_BRANCH}" ]; then
         cd ${ROOT}
@@ -69,43 +69,10 @@ cat > _site/index.html <<EOF
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
   <title>H Basement</title>
-  <link id="microverse-css" rel="stylesheet" href="./assets/css/microverse.css" />
-  <link href="./main/assets/fonts/css/all.min.css" rel="stylesheet">
- <script defer src="./main/lib/index-18858f3f.js"></script>
 </head>
 
 <body class="no-select">
-  <div id="hud">
-    <div class="container">
-      <div class="controllers" style="border:1px solid red">
-        <div id="homeBtn" class="btn btn-ui">
-          <i class="fas fa-solid fa-house-user no-pointer-events"></i>
-        </div>
-        <div id="editModeBtn" mobile="false" class="btn">
-          <i class="fas fa-solid fa-angle-up no-pointer-events"></i>
-        </div>
-        <div id="worldMenuBtn" class="btn btn-ui">
-          <i class="fa fa-solid fa-bars no-pointer-events"></i>
-        </div>
-        <input id="ghostSlider" type="range" min="0" max="100">
-      </div>
-    </div>
-  </div>
-  <div id="shell-hud">
-    <div id="fullscreenBtn" class="btn btn-ui">
-      <i class="fas fa-solid fa-expand"></i>
-    </div>
-    <div id="joystick">
-        <div id="trackingknob"></div>
-        <div id="knob"></div>
-        <div id="joystick-arrows">
-          <div id="joystick-arrow-n" class="joystick-arrow"></div>
-          <div id="joystick-arrow-e" class="joystick-arrow"></div>
-          <div id="joystick-arrow-w" class="joystick-arrow"></div>
-          <div id="joystick-arrow-s" class="joystick-arrow"></div>
-        </div>
-    </div>
-  </div>
+ 
 
     <h1>The Basement</h1>
     <dl>
