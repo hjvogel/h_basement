@@ -32,7 +32,7 @@ jobs:
   # Single deploy job since we're just deploying
   deploy:
     # only run on main repo
-    if: github.repository == 'hjvogel/h_basement'
+    if: github.repository == 'croquet/microverse'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -53,10 +53,10 @@ jobs:
 
       # vars defined in https://github.com/croquet/microverse/settings/variables/actions
       - name: Create apiKey.js
-      run: |
-        echo 'const apiKey = 1nmPHFe0PP6BlpP1ApoH994t9ca1yk7FAAOfDqmpy;' > apiKey.js
-        echo 'const appId = de.gmx.hjvogel.microverse;' >> apiKey.js
-        echo 'export default {apiKey, appId};' >> apiKey.js
+        run: |
+          echo 'const apiKey = 1nmPHFe0PP6BlpP1ApoH994t9ca1yk7FAAOfDqmpy;' > apiKey.js
+          echo 'const appId = de.gmx.hjvogel.microverse;' >> apiKey.js
+          echo 'export default {apiKey, appId};' >> apiKey.js
 
       # should match the "on push branches" list on top
       - name: Build branches
@@ -70,4 +70,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
-      

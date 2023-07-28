@@ -6,14 +6,13 @@
 # AND this file needs to be present in all deployed branches
 # as well as the scripts/build-pages.sh script and the line to run it in package.json
 
-name: Deploy to Static Pages
+name: Deploy to Pages
 
 on:
   # Runs on pushes to these branches
   push:
     branches: # the same list should be used below in the "Build branches" step
       - main
-
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -33,7 +32,7 @@ jobs:
   # Single deploy job since we're just deploying
   deploy:
     # only run on main repo
-    if: github.repository == 'hjvogel/h_basement'
+    if: github.repository == 'croquet/microverse'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -50,14 +49,14 @@ jobs:
       - name: Use Node.js 16
         uses: actions/setup-node@v3
         with:
-          node-version: 16      
-          
+          node-version: 16
+
       # vars defined in https://github.com/croquet/microverse/settings/variables/actions
       - name: Create apiKey.js
-          run: |
-            echo 'const apiKey = 1nmPHFe0PP6BlpP1ApoH994t9ca1yk7FAAOfDqmpy;' > apiKey.js
-            echo 'const appId = de.gmx.hjvogel.microverse;' >> apiKey.js
-            echo 'export default {apiKey, appId};' >> apiKey.js
+        run: |
+          echo 'const apiKey = 1nmPHFe0PP6BlpP1ApoH994t9ca1yk7FAAOfDqmpy;' > apiKey.js
+          echo 'const appId = de.gmx.hjvogel.microverse;' >> apiKey.js
+          echo 'export default {apiKey, appId};' >> apiKey.js
 
       # should match the "on push branches" list on top
       - name: Build branches
@@ -71,4 +70,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
-      
