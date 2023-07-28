@@ -1,5 +1,5 @@
-const apiKey = '145gdDL6z9rxt7p8qbu0y7PAuAMz8qcatrEGOMBt9';
-const appId = 'de.gmx.hjvogel.webshowcase';
+const apiKey = '1nmPHFe0PP6BlpP1ApoH994t9ca1yk7FAAOfDqmpy';
+const appId = 'de.gmx.hjvogel.microverse';
 export default {apiKey, appId};
 
 // For development on local computer and local network, use a development key
