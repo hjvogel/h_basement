@@ -4,6 +4,7 @@ export default {apiKey, appId};
 
 // For development on local computer and local network, use a development key
 // from croquet.io/keys and create a file called apiKey-dev.js.
+// 1nmPHFe0PP6BlpP1ApoH994t9ca1yk7FAAOfDqmpy
 
 // For deployment to a publicly accessible server, create a production key
 // from croquet.io/keys and create a file called apiKey.js.
