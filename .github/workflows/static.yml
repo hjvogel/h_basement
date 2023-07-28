@@ -13,9 +13,6 @@ on:
   push:
     branches: # the same list should be used below in the "Build branches" step
       - main
-      - deploy
-      - control-panel
-      - three153
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -54,15 +51,6 @@ jobs:
         with:
           node-version: 16
 
-
-      # should match the "on push branches" list on top
-      - name: Build branches
-        run: |
-          npm run build-pages \
-            main \
-            deploy \
-            control-panel \
-            three153 \
 
       - name: Upload _site
         uses: actions/upload-pages-artifact@v1
