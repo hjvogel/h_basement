@@ -54,8 +54,8 @@ jobs:
       # vars defined in https://github.com/croquet/microverse/settings/variables/actions
       - name: Create apiKey.js
         run: |
-          echo 'const apiKey = "1nmPHFe0PP6BlpP1ApoH994t9ca1yk7FAAOfDqmpy";' > apiKey.js
-          echo 'const appId = "de.gmx.hjvogel.microverse";' >> apiKey.js
+        echo 'const apiKey = "${{ vars.API_KEY }}";' > apiKey.js
+        echo 'const appId = "${{ vars.API_ID }}";' >> apiKey.js
           echo 'export default {apiKey, appId};' >> apiKey.js
 
       # should match the "on push branches" list on top
