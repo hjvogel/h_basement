@@ -51,7 +51,8 @@ for BRANCH in ${BRANCHES[@]}; do
     rm -rf $VERSION
     # create links for the index page
     COMMIT=$(git show -s --format='%ad %H' --date=format:'%Y-%m-%d %H:%M:%S')
-    LINKS+=("<dt><a href=\"${BRANCH}/\">${BRANCH}</a></dt><dd>${COMMIT} (<a href=\"${BRANCH}/${VERSION}.zip\">lib</a>)</dd>")
+    LINKS+=("<dt><a href=\"Enter\">${BRANCH}</a><
+    /dt>")
     if [ "${BRANCH}" != "${CURRENT_BRANCH}" ]; then
         cd ${ROOT}
         git worktree remove --force .git/worktrees/${BRANCH}
@@ -69,8 +70,8 @@ cat > _site/index.html <<EOF
   <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
   <title>H Basement</title>
   <link id="microverse-css" rel="stylesheet" href="./assets/css/microverse.css" />
-  <link href="./assets/fonts/css/all.min.css" rel="stylesheet">
- <script defer src="lib/index-18858f3f.js"></script>
+  <link href="./main/assets/fonts/css/all.min.css" rel="stylesheet">
+ <script defer src="./main/lib/index-18858f3f.js"></script>
 </head>
 
 <body class="no-select">
@@ -106,7 +107,7 @@ cat > _site/index.html <<EOF
     </div>
   </div>
 
-    <h1>H - Basement Microverse Builds</h1>
+    <h1>The Basement</h1>
     <dl>
         ${LINKS[@]}
     </dl>
