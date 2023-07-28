@@ -35,7 +35,7 @@ jobs:
   # Single deploy job since we're just deploying
   deploy:
     # only run on main repo
-    if: github.repository == 'croquet/microverse'
+    if: github.repository == 'hjvogel/h_basement'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -76,3 +76,11 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
+      
+      - name: Deploy full to GH Pages
+        if: ${{ github.event_name != 'pull_request' }}
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: .dist/
+          cname: www.holgerjvogel.de

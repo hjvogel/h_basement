@@ -66,10 +66,10 @@ cat > _site/index.html <<EOF
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Microverse Builds</title>
+    <title>H Basement Builds</title>
 </head>
 <body style="font-family:monospace">
-    <h1>Microverse Builds</h1>
+    <h1>H - Basement Microverse Builds</h1>
     <dl>
         ${LINKS[@]}
     </dl>

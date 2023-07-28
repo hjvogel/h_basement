@@ -1,4 +1,8 @@
-# Contributing to Microverse Repository
+# Contributing to Microverse Repository - Connecting many to a new open Metaverse
+
+
+
+## Read from Croquet >
 
 The github issues are for bugs and feature requests for the Croquet Microverse system itself. If you have a general question in using Microverse, please use the [Croquet Community Discord](https://croquet.io/discord).
 

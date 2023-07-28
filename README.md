@@ -1,4 +1,9 @@
-# Croquet Microverse (Beta)
+# H´s Basement (not Ready Player One but Own) 
+### based on Croquet Microverse (Beta)
+
+Just build your own too, creata a portal to where you want to connect - and Ready Play Own Metaverse
+
+I start to connect to the yet closed Gallery living on [CTCS.ch](https://CTCS.ch)
 
 ![Microverse Screenshot](https://croquet.io/images/microversess.png)
 

@@ -27,7 +27,7 @@
     "@dimforge/rapier3d": "0.11.1",
     "fflate": "0.7.4",
     "jszip": "3.10.1",
-    "load-bmfont": "1.4.1",
+    "load-bmfont": "^1.0.0",
     "three": "0.155.0",
     "three-mesh-bvh": "0.6.3"
   },

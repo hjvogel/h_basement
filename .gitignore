@@ -4,5 +4,5 @@ node_modules
 .DS_Store
 .vercel
 /apiKey-dev.js
-apiKey.js
 assets/3D/reflect.glb
+.settings
