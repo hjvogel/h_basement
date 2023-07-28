@@ -55,17 +55,6 @@ jobs:
           node-version: 16
 
 
-      # should match the "on push branches" list on top
-      - name: Build branches
-        run: |
-          npm run build-pages \
-            main \
-            deploy \
-            control-panel \
-            three153 \
-
-      - name: Upload _site
-        uses: actions/upload-pages-artifact@v1
 
       - name: Deploy to GitHub Pages
         id: deployment
