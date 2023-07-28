@@ -6,7 +6,7 @@
 # AND this file needs to be present in all deployed branches
 # as well as the scripts/build-pages.sh script and the line to run it in package.json
 
-name: Deploy to Pages
+name: Deploy to Static Pages
 
 on:
   # Runs on pushes to these branches
@@ -32,7 +32,7 @@ jobs:
   # Single deploy job since we're just deploying
   deploy:
     # only run on main repo
-    if: github.repository == 'croquet/microverse'
+    if: github.repository == 'hjvogel/h_basement'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}

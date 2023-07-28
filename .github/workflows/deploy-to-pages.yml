@@ -32,7 +32,7 @@ jobs:
   # Single deploy job since we're just deploying
   deploy:
     # only run on main repo
-    if: github.repository == 'croquet/microverse'
+    if: github.repository == 'hjvogel/h_basement'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
