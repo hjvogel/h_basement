@@ -50,7 +50,14 @@ jobs:
       - name: Use Node.js 16
         uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: 16      
+          
+      # vars defined in https://github.com/croquet/microverse/settings/variables/actions
+      - name: Create apiKey.js
+          run: |
+            echo 'const apiKey = "1nmPHFe0PP6BlpP1ApoH994t9ca1yk7FAAOfDqmpy";' > apiKey.js
+            echo 'const appId = "de.gmx.hjvogel.microverse";' >> apiKey.js
+            echo 'export default {apiKey, appId};' >> apiKey.js
 
       # should match the "on push branches" list on top
       - name: Build branches

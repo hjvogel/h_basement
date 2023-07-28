@@ -51,8 +51,7 @@ for BRANCH in ${BRANCHES[@]}; do
     rm -rf $VERSION
     # create links for the index page
     COMMIT=$(git show -s --format='%ad %H' --date=format:'%Y-%m-%d %H:%M:%S')
-    LINKS+=("<dt><a href=\"${BRANCH}/\">Enter</a><
-    /dt>")
+    LINKS+=("<dt><a href=\"${BRANCH}/\">Enter</a></dt>")
     if [ "${BRANCH}" != "${CURRENT_BRANCH}" ]; then
         cd ${ROOT}
         git worktree remove --force .git/worktrees/${BRANCH}
