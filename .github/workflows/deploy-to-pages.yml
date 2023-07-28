@@ -54,7 +54,7 @@ jobs:
       # vars defined in https://github.com/croquet/microverse/settings/variables/actions
       - name: Create apiKey.js
         run: |
-          echo 'const apiKey = "${{ vars.API_KEY }}";' > apiKey.js
+          echo 'const apiKey = "${{ vars.API_KEY }}";' >> apiKey.js
           echo 'const appId = "${{ vars.API_ID }}";' >> apiKey.js
           echo 'export default {apiKey, appId};' >> apiKey.js
 
