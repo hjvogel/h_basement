@@ -6,7 +6,7 @@
 # AND this file needs to be present in all deployed branches
 # as well as the scripts/build-pages.sh script and the line to run it in package.json
 
-name: Deploy to Pages
+name: Deploy to Pages v2
 
 on:
   # Runs on pushes to these branches
