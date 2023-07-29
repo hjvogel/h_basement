@@ -31,8 +31,8 @@ concurrency:
 jobs:
   # Single deploy job since we're just deploying
   deploy:
-    # only run on main repo
-    if: github.repository == 'hjvogel/h_basement'
+    # only run on main repo -- backcremove the underscores to make it work
+    if: github.repository == '__hjvogel/h_basement__'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
